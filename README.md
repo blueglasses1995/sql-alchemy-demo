@@ -5,7 +5,7 @@ Pythonの最も人気のあるORMライブラリ、SQLAlchemyを体系的に学�
 ## 特徴
 
 - **詳細な技術解説**: 各機能の技術的原理をテキスト図解を含めて詳しく説明
-- **段階的な学習**: 基礎から応用まで7つの章で体系的に学習
+- **段階的な学習**: 基礎から応用まで17章で体系的に学習
 - **実践的なハンズオン**: 各章に実行可能なコード例を用意
 - **自動実行システム**: ファイルを編集・保存すると自動的に実行される開発環境
 - **Alembic統合**: データベースマイグレーション管理も含む
@@ -53,6 +53,62 @@ Pythonの最も人気のあるORMライブラリ、SQLAlchemyを体系的に学�
 - Alembicの基本操作
 - スキーマ変更の管理
 - 本番環境での適用戦略
+
+### [第8章: 非同期SQLAlchemy (AsyncIO)](./tutorials/chapter08/README.md)
+- AsyncEngineとAsyncSession
+- async/awaitパターン
+- 非同期CRUD操作
+- 並行処理とパフォーマンス
+
+### [第9章: Hybrid PropertiesとExpression](./tutorials/chapter09/README.md)
+- Hybrid Propertyの概念
+- PythonレベルとSQLレベルの両対応
+- Hybrid Methodの使い方
+- カスタムSQL式の定義
+
+### [第10章: イベントシステム](./tutorials/chapter10/README.md)
+- ORMイベント（before/after insert/update/delete）
+- セッションイベント
+- コネクションイベント
+- 監査ログシステムの実装
+
+### [第11章: 継承とポリモーフィズム](./tutorials/chapter11/README.md)
+- Single Table Inheritance
+- Joined Table Inheritance
+- Concrete Table Inheritance
+- ポリモーフィッククエリ
+
+### [第12章: Association ProxyとOrdering List](./tutorials/chapter12/README.md)
+- Association Proxyで多対多を簡略化
+- Ordering Listでリスト順序を管理
+
+### [第13章: カスタム型とComposite Types](./tutorials/chapter13/README.md)
+- TypeDecoratorでカスタム型を作成
+- Composite Typesで複合型を定義
+
+### [第14章: ReflectionとInspection](./tutorials/chapter14/README.md)
+- 既存DBからスキーマを読み取り
+- Reflectionで動的モデル生成
+- Inspectorでメタ情報を取得
+- Automapの使い方
+
+### [第15章: CTE、Window関数、高度なSQL](./tutorials/chapter15/README.md)
+- Common Table Expression (WITH句)
+- 再帰CTE
+- Window関数（ROW_NUMBER, RANK, LAG/LEAD）
+- UNION/INTERSECT/EXCEPT
+
+### [第16章: バッチ操作とパフォーマンス最適化](./tutorials/chapter16/README.md)
+- bulk_insert_mappings/bulk_update_mappings
+- yield_per()でメモリ効率化
+- Connection Poolingの最適化
+- Eager Loadingとインデックス戦略
+
+### [第17章: データベース固有機能](./tutorials/chapter17/README.md)
+- PostgreSQL: ARRAY、JSON/JSONB、UUID、全文検索
+- MySQL: ENUM、AUTO_INCREMENT
+- SQLite: 外部キー有効化
+- 方言別の処理
 
 ## 🚀 クイックスタート
 
@@ -121,7 +177,27 @@ sql-alchemy-demo/
 │   │   └── README.md
 │   ├── chapter06/              # 第6章: 高度なクエリ
 │   │   └── README.md
-│   └── chapter07/              # 第7章: Alembic
+│   ├── chapter07/              # 第7章: Alembic
+│   │   └── README.md
+│   ├── chapter08/              # 第8章: 非同期
+│   │   └── README.md
+│   ├── chapter09/              # 第9章: Hybrid Properties
+│   │   └── README.md
+│   ├── chapter10/              # 第10章: イベント
+│   │   └── README.md
+│   ├── chapter11/              # 第11章: 継承
+│   │   └── README.md
+│   ├── chapter12/              # 第12章: Association Proxy
+│   │   └── README.md
+│   ├── chapter13/              # 第13章: カスタム型
+│   │   └── README.md
+│   ├── chapter14/              # 第14章: Reflection
+│   │   └── README.md
+│   ├── chapter15/              # 第15章: CTE/Window関数
+│   │   └── README.md
+│   ├── chapter16/              # 第16章: パフォーマンス最適化
+│   │   └── README.md
+│   └── chapter17/              # 第17章: DB固有機能
 │       └── README.md
 │
 ├── utils/                       # ユーティリティ
@@ -176,23 +252,33 @@ python utils/auto_runner.py tutorials/chapter02
 
 ## 📖 推奨学習順序
 
-### 初心者向け
+### 初心者向け（基礎編）
 1. 第1章で全体像を把握
 2. 第2章でデータベース接続を理解
 3. 第3章でモデル定義を学ぶ
 4. 第4章でCRUDを習得
-5. 第7章でAlembicを学ぶ
+5. 第5章でリレーションシップを学ぶ
+6. 第7章でAlembicを学ぶ
 
-### 経験者向け
-1. 第1章を軽く読む（原理の理解）
-2. 第5章でリレーションシップを学ぶ
-3. 第6章で高度なクエリを習得
-4. 第7章でAlembicをマスター
+### 中級者向け（応用編）
+1. 第6章で高度なクエリを習得
+2. 第8章で非同期処理を学ぶ
+3. 第9章でHybrid Propertyを活用
+4. 第10章でイベントシステムを理解
+5. 第11章で継承パターンを学ぶ
+
+### 上級者向け（最適化・専門編）
+1. 第12-13章で高度な機能を習得
+2. 第14章でReflectionを活用
+3. 第15章でSQL機能を極める
+4. 第16章でパフォーマンスを最適化
+5. 第17章でDB固有機能をマスター
 
 ## 🎯 学習目標
 
 このチュートリアルを完了すると、以下のことができるようになります:
 
+### 基礎レベル
 - [ ] SQLAlchemyの基本概念と技術的原理を理解する
 - [ ] データベース接続とエンジンを適切に管理できる
 - [ ] ORMモデルを定義してテーブルを作成できる
@@ -201,6 +287,20 @@ python utils/auto_runner.py tutorials/chapter02
 - [ ] N+1問題を理解し回避できる
 - [ ] 複雑なクエリを構築できる
 - [ ] Alembicでスキーマ変更を管理できる
+
+### 応用レベル
+- [ ] 非同期SQLAlchemyを使いこなせる
+- [ ] Hybrid Propertyでクエリ可能な属性を定義できる
+- [ ] イベントシステムでカスタムロジックを実装できる
+- [ ] 継承パターンを適切に選択・実装できる
+- [ ] Association Proxyで多対多を簡略化できる
+
+### 上級レベル
+- [ ] カスタム型とComposite Typesを定義できる
+- [ ] Reflectionで既存DBを扱える
+- [ ] CTE、Window関数などの高度なSQLを使いこなせる
+- [ ] バッチ操作でパフォーマンスを最適化できる
+- [ ] データベース固有機能を活用できる
 
 ## 🌟 特徴的な内容
 

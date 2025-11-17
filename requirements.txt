@@ -2,8 +2,13 @@
 sqlalchemy>=2.0.0
 alembic>=1.12.0
 
+# 非同期ドライバ（第8章）
+aiosqlite>=0.19.0  # SQLite非同期ドライバ
+# asyncpg>=0.29.0  # PostgreSQL非同期ドライバ（オプション）
+# aiomysql>=0.2.0  # MySQL非同期ドライバ（オプション）
+
 # データベースドライバ
-psycopg2-binary  # PostgreSQL用（オプション）
+# psycopg2-binary>=2.9.0  # PostgreSQL用（オプション）
 
 # 開発ツール
 watchdog>=3.0.0  # ファイル監視
