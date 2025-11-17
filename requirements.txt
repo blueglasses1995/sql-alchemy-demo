@@ -1,0 +1,12 @@
+# SQLAlchemy と関連ツール
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+
+# データベースドライバ
+psycopg2-binary  # PostgreSQL用（オプション）
+
+# 開発ツール
+watchdog>=3.0.0  # ファイル監視
+ipython>=8.0.0   # 対話的シェル
+pytest>=7.0.0    # テスト
+black>=23.0.0    # コードフォーマッター
